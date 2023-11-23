@@ -7,7 +7,7 @@ void merge(int l, int r, int mid)
     int left_size = mid - l + 1;
     int L[left_size + 1];
 
-    int right_size = r - mid ;
+    int right_size = r - mid;
     int R[right_size + 1];
     for (int i = l, j = 0; i <= mid; i++, j++)
     {
@@ -19,7 +19,7 @@ void merge(int l, int r, int mid)
     }
     L[left_size] = INT_MAX; // infinty
     R[right_size] = INT_MAX;
-    int lp = 0 ;
+    int lp = 0;
     int rp = 0;
     for (int i = l; i <= r; i++)
     {
@@ -30,7 +30,7 @@ void merge(int l, int r, int mid)
         }
         else
         {
-            nums[i]=R[rp];
+            nums[i] = R[rp];
             rp++;
         }
     }
@@ -52,7 +52,7 @@ int main()
     {
         cin >> nums[i];
     }
-    mergesort(0,n-1);
+    mergesort(0, n - 1);
     for (int i = 0; i < n; i++)
     {
         cout << nums[i] << " ";
