@@ -5,6 +5,7 @@ public:
       int e=nums.size()-1;
       while (s<=e)
       {
+        //this code time complexity is O{logn};
         int mid=s+(e-s)/2;
         int x=nums[mid];
         if (x==target)  return mid;
