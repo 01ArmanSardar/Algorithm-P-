@@ -10,9 +10,9 @@ int main()
     for (int i=0;i<m;i++)
     {
         int u,v;
-        cin>>u>>v;
-        adjmt[u][v]=1;
-        adjmt[v][u]=1;
+        cin>>u>>v;//jodhi weighted graph krte chai tahole aktah W value input nibho
+        adjmt[u][v]=1;//for directed graph,  weighted graph er jonno 1 er jaigai W er value tah takbhe 
+        adjmt[v][u]=1;//and both of input for undirected graph
     }
     for (int i=1;i<=n;i++)
     {
