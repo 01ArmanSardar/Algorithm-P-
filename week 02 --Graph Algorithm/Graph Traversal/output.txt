@@ -1,4 +1,21 @@
-List 1: (2 ,8)(3 ,9)
-List 2: (4 ,11)
-List 3: (2 ,15)
-List 4: (3 ,17)
+Visiting Node 1
+Visiting Node 2
+Visiting Node 3
+Visiting Node 8
+Visiting Node 9
+Visiting Node 5
+Visiting Node 4
+Visiting Node 7
+Visiting Node 6
+visiting array 
+node 1status:1
+node 2status:1
+node 3status:1
+node 4status:1
+node 5status:1
+node 6status:1
+node 7status:1
+node 8status:1
+node 9status:1
+node 10status:0
+node 11status:0
