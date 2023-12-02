@@ -29,6 +29,7 @@ int main()
         adj[u].push_back(v);
     }
     dfs(1);
+    
     cout <<"visiting array \n";
     for (int i=1;i<=n;i++)
     {
