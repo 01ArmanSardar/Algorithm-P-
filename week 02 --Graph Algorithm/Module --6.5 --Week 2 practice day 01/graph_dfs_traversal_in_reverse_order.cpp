@@ -2,17 +2,22 @@
 using namespace std;
 const int N = 1e3 + 5;
 vector<int> adjlist[N];
+vector<int> v;
 bool visited[N];
 void dfs(int u)
 {
+    /* v.push_back(u);
+    reverse(v.begin(),v.end()); */
     visited[u] = true; // prothomei jeh node tah asbhe tah k true kore dibho karon jathe next seh node tah teh nah dukte pareh ,karon akoi node a varvar dukle setah infinity loop a chole jabhe ,tai akbr je node tah asche setah teh jeno abr nah jaioa jai tai seh node tah true kore dichi.
-    cout << "Visiting Node " << u << endl;
+    // cout << "Visiting Node " << u << endl;
     for (int v : adjlist[u])
     {
+
         if (visited[v] == true)
             continue;
         dfs(v);
     }
+    cout << "Visiting Node " << u << endl;
 }
 int main()
 {
@@ -25,7 +30,7 @@ int main()
         adjlist[u].push_back(v);
         adjlist[v].push_back(u);
     }
-   
+
     dfs(1);
     /*  for (int i=0;i<n;i++)
     {
