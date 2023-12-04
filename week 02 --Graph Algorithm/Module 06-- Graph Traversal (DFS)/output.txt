@@ -1,0 +1,9 @@
+Depth of Node 1 : 0
+Depth of Node 2 : 1
+Depth of Node 3 : 3
+Depth of Node 4 : 2
+*************
+height of Node 1 : 3
+height of Node 2 : 2
+height of Node 3 : 0
+height of Node 4 : 1

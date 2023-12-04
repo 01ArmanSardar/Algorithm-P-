@@ -1,4 +1,4 @@
-Visiting Node 4
-Visiting Node 3
-Visiting Node 2
-Visiting Node 1
+List 1: 0 3 
+List 2: 0 1 
+List 3: 2 
+List 4: 

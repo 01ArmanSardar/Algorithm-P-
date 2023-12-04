@@ -6,8 +6,7 @@ vector<int> v;
 bool visited[N];
 void dfs(int u)
 {
-    /* v.push_back(u);
-    reverse(v.begin(),v.end()); */
+    
     visited[u] = true; // prothomei jeh node tah asbhe tah k true kore dibho karon jathe next seh node tah teh nah dukte pareh ,karon akoi node a varvar dukle setah infinity loop a chole jabhe ,tai akbr je node tah asche setah teh jeno abr nah jaioa jai tai seh node tah true kore dichi.
     // cout << "Visiting Node " << u << endl;
     for (int v : adjlist[u])

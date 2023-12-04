@@ -24,17 +24,17 @@ int main()
     cin >> n >> m;
     for (int i = 0; i < m; i++)
     {
-        int u, v, w;
+        int u, v;
         cin >> u >> v;
         adj[u].push_back(v);
     }
     dfs(1);
     
-    cout <<"visiting array \n";
+    /* cout <<"visiting array \n";
     for (int i=1;i<=n;i++)
     {
         cout<<"node " <<i<<"status:"<<visited[i]<<endl;
-    }
+    } */
 
     return 0;
 }
