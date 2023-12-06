@@ -1,1 +1,1 @@
-number of conected componant3
+no cycle detected

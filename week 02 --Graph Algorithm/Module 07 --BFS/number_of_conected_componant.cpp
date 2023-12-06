@@ -51,6 +51,6 @@ int main()
         dfs(i);
         cc++;
     }
-    cout <<"number of conected componant"<<cc<<endl;
+    cout <<"number of conected componant : "<<cc<<endl;
     return 0;
 }
