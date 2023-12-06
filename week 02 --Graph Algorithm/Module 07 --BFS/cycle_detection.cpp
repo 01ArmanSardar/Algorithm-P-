@@ -28,10 +28,20 @@ int main()
         adjlst[u].push_back(v);
         adjlst[v].push_back(u);
     }
-   if ( dfs(1))
+    bool isCycle =false;
+    for (int i=1;i<=n;i++)
+    {
+        if (visited[i]) continue;
+        isCycle |= dfs(i);
+    }
+    if (isCycle)
+    cout <<"Cycle Detected \n";
+    else cout <<"NO cyclde detected \n";
+  /* ai part tah holo sudhu aktah componant er jonno
+  if ( dfs(1))
 {
     cout << "cycle detected\n";
 }
-else cout <<"no cycle detected\n";
+else cout <<"no cycle detected\n";*/
     return 0;
 }
