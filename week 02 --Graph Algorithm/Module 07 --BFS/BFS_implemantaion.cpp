@@ -15,16 +15,20 @@ void dfs(int s)
     {
         int u = q.front();
         q.pop();
+        //Section 1: A node is being processed
         cout <<"visiting node "<< u <<endl;
         for (int v : adjlst[u])
         {
+            //section 2: childe processing
             if (visited[v] == true)
                 continue;
             q.push(v);
             visited[v]=true ;
+            // section 3 ;child processing
             level[v]=level[u]+1;
 
         }
+        //section 4: queue er front element er kaj sese akhn next element tah nie kaj korbho
     }
 }
 int main()
