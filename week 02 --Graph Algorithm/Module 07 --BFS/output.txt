@@ -10,3 +10,15 @@ visiting node 12
 visiting node 6
 visiting node 7
 visiting node 8
+level of 1: 0
+level of 2: 1
+level of 3: 1
+level of 4: 2
+level of 5: 2
+level of 6: 3
+level of 7: 3
+level of 8: 4
+level of 9: 2
+level of 10: 1
+level of 11: 2
+level of 12: 2

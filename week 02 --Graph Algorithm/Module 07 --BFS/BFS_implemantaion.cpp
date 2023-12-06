@@ -8,7 +8,9 @@ void dfs(int s)
 {
     queue<int> q;
     q.push(s);
+    
     visited[s] = true;
+    level[s]=0;
     while (!q.empty())
     {
         int u = q.front();
@@ -20,6 +22,7 @@ void dfs(int s)
                 continue;
             q.push(v);
             visited[v]=true ;
+            level[v]=level[u]+1;
 
         }
     }
@@ -37,6 +40,10 @@ int main()
         
     }
     dfs(1);
+    for (int i=1;i<=n;i++)
+    {
+        cout <<"level of "<<i<<": "<<level[i]<<endl;
+    }
 
     return 0;
 }
