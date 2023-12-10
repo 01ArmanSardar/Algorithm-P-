@@ -50,7 +50,7 @@ int main()
         int s, d;
         cin >> s >> d;
 
-        // Reset arrays for each query
+        
         fill(visited, visited + N, false);
         fill(level, level + N, 0);
 
