@@ -1,52 +1,46 @@
-#include <iostream>
-#include <vector>
-#include <queue>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-const int MAX_N = 20;
-vector<int> adjList[MAX_N];
-
-int countDirectlyConnected(int n, int e, int k) {
-    vector<bool> visited(n, false);
+const int N = 20;
+vector<int> adjlst[N];
+bool visited[N];
+ int countk=0;
+int bfs(int k)
+{
+    
     queue<int> q;
-    int directlyConnected = 0;
-
     q.push(k);
     visited[k] = true;
-
-    while (!q.empty()) {
-        int currentHouse = q.front();
+    while (!q.empty())
+    {
+        int u=q.front();
         q.pop();
-        directlyConnected++;
-
-        for (int neighbor : adjList[currentHouse]) {
-            if (!visited[neighbor]) {
-                q.push(neighbor);
-                visited[neighbor] = true;
-            }
+       //countk++;
+        for (int v:adjlst[u])
+        { 
+           // countk++;
+            if (visited[v]==true) continue;
+            q.push(v);
+            countk++;
+            visited[v]=true;
         }
     }
-
-    return directlyConnected ; // Excluding Kamal's house
+    
 }
-
-int main() {
+int main()
+{
     int n, e;
     cin >> n >> e;
-
-    for (int i = 0; i < e; ++i) {
-        int a, b;
-        cin >> a >> b;
-        adjList[a].push_back(b);
-        adjList[b].push_back(a);
+    for (int i = 0; i < e; i++)
+    {
+        int u, v;
+        cin >> u >> v;
+        adjlst[u].push_back(v);
+        adjlst[v].push_back(u);
     }
+   int k;
+   cin>>k;
+   bfs(k);
 
-    int k;
-    cin >> k;
 
-    int result = countDirectlyConnected(n, e, k);
-    cout << result << endl;
-
-    return 0;
+        return 0;
 }
