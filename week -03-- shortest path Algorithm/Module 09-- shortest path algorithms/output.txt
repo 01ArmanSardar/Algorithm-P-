@@ -1,2 +1,7 @@
-distance : 2
-path : 1 3 7 
+distance of 1 : 0
+distance of 2 : 3
+distance of 3 : 5
+distance of 4 : 6
+distance of 5 : 7
+distance of 6 : 7
+distance of 7 : 9
