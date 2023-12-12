@@ -32,9 +32,10 @@ int main()
         leaders.push_back(i);
         dfs(i);
     }
-    for (auto l : leaders)
+    cout <<leaders.size()-1<<endl;
+    for (int i=1;i<leaders.size();i++)
     {
-        cout << l << " ";
+        cout<<leaders[i-1]<<" "<<leaders[i]<<endl;
     }
     return 0;
 }
