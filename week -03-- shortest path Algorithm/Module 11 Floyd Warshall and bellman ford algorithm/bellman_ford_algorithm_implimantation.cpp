@@ -14,6 +14,7 @@ void bellman_ford(int s)
 
     for (int i = 1; i < n; i++)
     {
+        //all edges relaxtion
         for (int u = 1; u <= n; u++)
         {
             for (pii vpair : grap[u])
@@ -40,7 +41,8 @@ int main()
         bellman_ford(1);
         for (int i = 1; i <= n; i++)
         {
-            cout << "distance of " << i << " :" << d[i] << endl;
+            cout << "distance of " << i ;
+            cout <<" :"<<d[i]<<endl;
         }
     }
 
