@@ -11,7 +11,7 @@ int find(int n)
 }
 int main()
 {
-    cout << find(5);
+    cout << find(4);
 
     return 0;
 }
