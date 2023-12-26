@@ -51,6 +51,6 @@ int main()
         cin >> a >> b;
         dsu_union(a, b);
     }
-    dsu_find(5);
+ cout<<dsu_find(6);
     return 0;
 }
