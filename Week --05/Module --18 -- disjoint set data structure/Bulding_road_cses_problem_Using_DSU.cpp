@@ -48,6 +48,22 @@ int main()
         cin >> a >> b;
         dsu_union(a, b);
     }
-    cout << dsu_find(4);
+    map<int, bool> mp;
+    for (int i = 1; i <= n; i++)
+    {
+        int ldr = dsu_find(i);
+        mp[ldr] = true;
+    }
+    vector<int> v;
+    for (pair<int, bool> p : mp)
+    {
+        v.push_back(p.first);
+    }
+    cout << v.size() - 1 << endl;
+    for (int i = 0; i < v.size() - 1; i++)
+    {
+        cout << v[i] << " " << v[i + 1] << endl;
+    }
+
     return 0;
 }
