@@ -24,11 +24,12 @@ public:
         return a.w > b.w;
     }
 };
-void prims(int s)
+void prims(int s, int n)
 {
     priority_queue<edge, vector<edge>, cmp> pq;
     vector<edge> edglist;
     pq.push(edge(s, s, 0));
+    int cnt = 0;
     while (!pq.empty())
     {
         edge parent = pq.top();
@@ -39,6 +40,7 @@ void prims(int s)
         if (vis[b])
             continue;
         vis[b] = true;
+        cnt++;
         edglist.push_back(parent);
         for (int i = 0; i < adjlst[b].size(); i++)
         {
@@ -50,9 +52,18 @@ void prims(int s)
         }
     }
     edglist.erase(edglist.begin());
-    for (edge val:edglist)
+    long long int sum = 0;
+    for (edge val : edglist)
     {
-        cout <<val.a<<" "<<val.b<<" "<<val.w<<endl;
+        sum += (long long)(val.w);
+    }
+    if (cnt == n)
+    {
+        cout << sum << endl;
+    }
+    else
+    {
+        cout << "IMPOSSIBLE" << endl;
     }
 }
 int main()
@@ -66,6 +77,7 @@ int main()
         adjlst[a].push_back({b, w});
         adjlst[b].push_back({a, w});
     }
-    prims(1);
+    prims(1, n);
+
     return 0;
 }
