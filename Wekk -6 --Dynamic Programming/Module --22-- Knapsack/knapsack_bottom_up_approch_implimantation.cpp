@@ -31,13 +31,17 @@ int main()
     {
         for (int j = 1; j <= s; j++)
         {
-            if (wgt[i - 1] <= j)
+            // it's call DP state
+            /*
+             if (wgt[i - 1] <= j)
             {
                 dp[i][j] = max(val[i - 1] + dp[i - 1][j - wgt[i - 1]], dp[i - 1][j]);
             }
             else
-                dp[i][j] = dp[i - 1][j];
-            /*    if (wgt[i - 1] <= j)
+                dp[i][j] = dp[i - 1][j]; */
+            // this is normal implimantation for bottom up approch
+            /*
+              if (wgt[i - 1] <= j)
                {
                    int opt1 = dp[i - 1][j - wgt[i - 1]] + val[i - 1];
                    int opt2 = dp[i - 1][j];
