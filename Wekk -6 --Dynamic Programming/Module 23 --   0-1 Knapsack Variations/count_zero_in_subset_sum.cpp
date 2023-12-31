@@ -12,7 +12,7 @@ int main()
     }
     int s;
     cin >> s;
-    dp[0][0] = 1;
+    dp[0][0] = true;
     
     for (int i = 1; i <= s; i++)
     {
