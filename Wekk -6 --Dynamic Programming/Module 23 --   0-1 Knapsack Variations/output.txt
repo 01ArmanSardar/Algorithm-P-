@@ -1,1 +1,5 @@
-yes
+T f f f f f f f 
+T T f f f f f f 
+T T T T f f f f 
+T T T T T T T f 
+T T T T T T T T 
