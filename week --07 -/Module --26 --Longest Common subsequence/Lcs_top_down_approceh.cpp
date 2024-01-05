@@ -23,7 +23,7 @@ int main()
 {
     string a, b;
     cin >> a >> b;
-    memset(dp,-1,sizeof(dp));//memset (array name,array the je value set korbho,array er size dibho)
+    memset(dp, -1, sizeof(dp)); // memset (array name,array the je value set korbho,array er size dibho)
     cout << lcs(a, a.size(), b, b.size()) << endl;
     return 0;
 }
