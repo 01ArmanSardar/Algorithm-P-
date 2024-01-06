@@ -53,5 +53,6 @@ int main()
     int LpsSize=ans.size();
     int minimumDeletionToMakePalindrome=n-LpsSize;
     cout <<minimumDeletionToMakePalindrome<<endl;
+    //minimum deletion number tai kintu minimum insertion number, karon amra jeh character gulah delete korbho seh character gular opiste a jodhi oi character gulo die dei taholei kintu abbr plindrome hoie geloh
     return 0;
 }
