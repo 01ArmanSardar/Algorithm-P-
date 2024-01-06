@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     string a, b;
-    cin>>a>>b;
+    cin >> a >> b;
     int n = a.size();
     int m = b.size();
     int dp[n + 1][m + 1];
@@ -11,9 +11,9 @@ int main()
     {
         for (int j = 0; j <= m; j++)
         {
-            if (i==0 || j==0)
+            if (i == 0 || j == 0)
             {
-                dp[i][j]=0;
+                dp[i][j] = 0;
             }
         }
     }
@@ -25,13 +25,13 @@ int main()
             {
                 dp[i][j] = dp[i - 1][j - 1] + 1;
             }
-            else 
+            else
             {
-                dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
             }
         }
     }
-   // cout <<dp[n][m]<<endl;
-    cout <<n+m - dp[n][m]<<endl;
+    // cout <<dp[n][m]<<endl;
+    cout << n + m - dp[n][m] << endl; // lcs abong shortest common supersequencie er maje sudhu ai line tah diffrence,2 tah er size tekeh lcs er size badh dilei amra shortest common supersequiece peye jabho
     return 0;
 }
