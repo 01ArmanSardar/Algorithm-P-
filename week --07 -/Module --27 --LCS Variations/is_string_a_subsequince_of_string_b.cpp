@@ -6,6 +6,7 @@ int main()
     cin >> a >> b;
     int n = a.size(), m = b.size();
     // NORMAL APPROCH
+    //TIME COMPLEXITY O(M)
     int x = 0;
     bool ans = false;
     for (char c : b)
@@ -26,7 +27,7 @@ int main()
         cout << "no" << endl;
 
     // LCS APPROCH
-
+//TIME COMPLEXITY O(N*M)
     /* int dp[n + 1][m + 1];
     for (int i = 0; i <= n; i++)
     {

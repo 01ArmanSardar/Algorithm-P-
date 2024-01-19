@@ -49,17 +49,17 @@ int main()
     {
         int a, b;
         cin >> a >> b;
-         int leaderA = dsu_find(a);
-    int leaderB = dsu_find(b);
-    if (leaderA==leaderB)
-    {
-        cout <<"cycle detection between"<<":"<<a<<" "<<b<<endl;
-    }
-    else 
-    {
-        dsu_union(a,b);
-    }
-        
+        int leaderA = dsu_find(a);
+        int leaderB = dsu_find(b);
+        if (leaderA == leaderB)
+        {
+            cout << "cycle detection between"
+                 << ":" << a << " " << b << endl;
+        }
+        else
+        {
+            dsu_union(a, b);
+        }
     }
 
     return 0;
